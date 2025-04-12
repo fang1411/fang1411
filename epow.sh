@@ -57,4 +57,28 @@ while true; do
     echo "2. 查看地址与助记词"
     echo "3. 启动节点挖矿（后台运行）"
     echo "4. 查看 Bitz 余额"
-    echo "5. 
+    echo "5. 领取 Bitz 奖励"
+    echo "=================================================="
+    read -p "请输入操作编号 (1/2/3/4/5): " choice
+
+    case $choice in
+        1)
+            install_node
+            ;;
+        2)
+            show_wallet
+            ;;
+        3)
+            run_node
+            ;;
+        4)
+            check_balance
+            ;;
+        5)
+            claim_bitz
+            ;;
+        *)
+            echo "❗ 无效选项，请重新输入 1-5。"
+            ;;
+    esac
+done
